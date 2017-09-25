@@ -1,7 +1,7 @@
 {
-  "name": "redux-notemark",
+  "name": "vital-mark",
   "version": "1.0.0",
-  "description": "",
+  "description": "something vital to do",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=production mocha --compilers js:babel-core/register --require ignore-styles -r jsdom-global/register",
@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --hot"
   },
   "keywords": [],
-  "author": "",
+  "author": "winjeysong",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.25.0",
