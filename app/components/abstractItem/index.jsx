@@ -10,7 +10,7 @@ const propTypes = {
     click: PropTypes.func.isRequired
 }
 
-function abstractItem({ item, click }) {
+function AbstractItem({ item, click }) {
     //time
     let currentTime = new Date().getTime();
     let itemTime = item.time;
@@ -49,6 +49,6 @@ function abstractItem({ item, click }) {
     );
 }
 
-abstractItem.propTypes = propTypes;
+AbstractItem.propTypes = propTypes;
 
-export default abstractItem;
+export default AbstractItem;
