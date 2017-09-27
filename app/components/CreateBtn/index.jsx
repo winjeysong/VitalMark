@@ -16,7 +16,7 @@ function CreateBtn({ click }) {
             className="create-btn btn btn primary"
             type="button"
         >
-            新建
+            <span className="glyphicon glyphicon-plus" aria-hidden="true" /> 新建
         </button>
     );
 }
