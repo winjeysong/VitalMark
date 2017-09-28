@@ -18,7 +18,7 @@ function AbstractList({ items, select }) {
             <AbstractItem
                 item={item}
                 key={item.id}
-                onClick={()=>select()}
+                click={() => select()}
             />
         )
     );
