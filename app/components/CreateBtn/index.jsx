@@ -13,7 +13,7 @@ function CreateBtn({ onClick }) {
     return (
         <button
             onClick={onClick}
-            className="create-btn btn btn primary"
+            className="create-btn btn btn-primary"
             type="button"
         >
             <span className="glyphicon glyphicon-plus" aria-hidden="true" /> 新建
