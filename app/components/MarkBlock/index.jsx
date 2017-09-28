@@ -10,10 +10,11 @@ import marked from "marked";
 const propTypes = {
     item: PropTypes.object,
     complete: PropTypes.func.isRequired,
-    edit: PropTypes.func.isRequired
+    edit: PropTypes.func.isRequired,
+    remove: PropTypes.func.isRequired
 };
 
-function MarkBlock({ item, complete, edit }) {
+function MarkBlock({ item, complete, edit, remove }) {
     if (!item || !item.id) {
         return (
             <section className="mark-block no-marks">
@@ -40,17 +41,24 @@ function MarkBlock({ item, complete, edit }) {
                     <div className="control-btn">
                         <button
                             type="button"
-                            className="complete-btn btn btn-default"
+                            className="complete-btn btn btn-success"
                             onClick={complete}
                         >
-                            <span className="glyphicon glyphicon-remove" aria-hidden="true" /> 完成
+                            <span className="glyphicon glyphicon-ok" aria-hidden="true" /> 完成
                         </button>
                         <button
                             type="button"
-                            className="edit-btn btn btn-default"
+                            className="edit-btn btn btn-primary"
                             onClick={edit}
                         >
                             <span className="glyphicon glyphicon-pencil" aria-hidden="true" /> 编辑
+                        </button>
+                        <button
+                            type="button"
+                            className="edit-btn btn btn-danger"
+                            onClick={remove}
+                        >
+                            <span className="glyphicon glyphicon-trash" aria-hidden="true" /> 删除
                         </button>
                     </div>
                 </div>
