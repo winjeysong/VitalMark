@@ -42,21 +42,21 @@ function MarkBlock({ item, complete, edit, remove }) {
                         <button
                             type="button"
                             className="complete-btn btn btn-success"
-                            onClick={complete}
+                            onClick={() => complete(item.id)}
                         >
                             <span className="glyphicon glyphicon-ok" aria-hidden="true" /> 完成
                         </button>
                         <button
                             type="button"
                             className="edit-btn btn btn-primary"
-                            onClick={edit}
+                            onClick={() => edit(item.id)}
                         >
                             <span className="glyphicon glyphicon-pencil" aria-hidden="true" /> 编辑
                         </button>
                         <button
                             type="button"
                             className="edit-btn btn btn-danger"
-                            onClick={remove}
+                            onClick={() => remove(item.id)}
                         >
                             <span className="glyphicon glyphicon-trash" aria-hidden="true" /> 删除
                         </button>
