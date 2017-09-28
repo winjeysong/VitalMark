@@ -9,11 +9,11 @@ import marked from "marked";
 
 const propTypes = {
     item: PropTypes.object,
-    onComplete: PropTypes.func.isRequired,
-    onEdit: PropTypes.func.isRequired
+    complete: PropTypes.func.isRequired,
+    edit: PropTypes.func.isRequired
 };
 
-function MarkBlock({ item, onComplete, onEdit }) {
+function MarkBlock({ item, complete, edit }) {
     if (!item || !item.id) {
         return (
             <section className="mark-block no-marks">
@@ -41,14 +41,14 @@ function MarkBlock({ item, onComplete, onEdit }) {
                         <button
                             type="button"
                             className="complete-btn btn btn-default"
-                            onClick={() => onComplete(item.id)}
+                            onClick={complete}
                         >
                             <span className="glyphicon glyphicon-remove" aria-hidden="true" /> 完成
                         </button>
                         <button
                             type="button"
                             className="edit-btn btn btn-default"
-                            onClick={() => onEdit(item.id)}
+                            onClick={edit}
                         >
                             <span className="glyphicon glyphicon-pencil" aria-hidden="true" /> 编辑
                         </button>

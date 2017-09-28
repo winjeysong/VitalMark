@@ -6,13 +6,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const propTypes = {
-    click: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired
 };
 
-function CreateBtn({ click }) {
+function CreateBtn({ onClick }) {
     return (
         <button
-            onClick={click}
+            onClick={onClick}
             className="create-btn btn btn primary"
             type="button"
         >

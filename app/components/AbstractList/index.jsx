@@ -9,16 +9,16 @@ import AbstractItem from "../AbstractItem";
 
 const propTypes = {
     items: PropTypes.array.isRequired,
-    select: PropTypes.func.isRequired
+    onSelect: PropTypes.func.isRequired
 };
 
-function AbstractList({ items, select }) {
+function AbstractList({ items, onSelect }) {
     const wholeList = items.map(
         item => (
             <AbstractItem
                 item={item}
                 key={item.id}
-                click={() => select()}
+                click={() => onSelect()}
             />
         )
     );
